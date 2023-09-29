@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import uz.turgunboyevjurabek.retrofitexamplewithmvp.Contract.Contract
 
 object ApiClient {
-    val BASE_URL="https://wallpaperapi.pythonanywhere.com/"
+    val BASE_URL="https://apiombor.pythonanywhere.com/"
 
     fun getRetrofit(): Retrofit{
         return Retrofit.Builder()
@@ -13,7 +13,7 @@ object ApiClient {
             .baseUrl(BASE_URL)
             .build()
     }
-    fun getServis(): Contract.Model.ApiServis {
+    fun getApiServis(): Contract.Model.ApiServis {
         return getRetrofit().create(Contract.Model.ApiServis::class.java)
     }
 
