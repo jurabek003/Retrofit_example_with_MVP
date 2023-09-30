@@ -23,6 +23,7 @@ class Presenter(private val mainView:Contract.View,private val model: ApiClient)
                 response: Response<ArrayList<GetClinets>>,
             ) {
                 if (response.isSuccessful && response.body()!=null){
+                    mainView.hideProgress()
                     mainView.itemsList(response.body()!!)
                 }else{
                     mainView.showError(response.message())

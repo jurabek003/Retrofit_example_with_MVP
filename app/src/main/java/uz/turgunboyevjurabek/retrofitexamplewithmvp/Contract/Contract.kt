@@ -11,7 +11,6 @@ interface Contract {
         fun showProgressLoading()
         fun hideProgress()
         fun showError(massage:String)
-
         fun failure(massage: String)
         fun itemsList(data:ArrayList<GetClinets>)
 
